@@ -4,15 +4,10 @@ import {
   useStripe,
 } from '@stripe/react-stripe-js';
 import axios from 'axios';
-// import PayButton from './PayButton';
-// import { Text } from '@chakra-ui/react';
 
 const Checkout = props => {
   const stripe = useStripe();
   const [paymentRequest, setPaymentRequest] = useState(null);
-//   const price = props.price;
-//   const card_id = props.card_id;
-//   const dollar_price = price * 100;
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   useEffect(() => {
@@ -32,7 +27,6 @@ const Checkout = props => {
 
       pr.canMakePayment().then(result => {
         if (result) {
-          // console.log("result: ", result)
           setPaymentRequest(pr);
         }
       });

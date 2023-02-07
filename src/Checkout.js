@@ -96,7 +96,7 @@ const Checkout = props => {
 
   return (
     <div>
-      {/* <PayButton /> */}
+      <p>Component did not load</p>
     </div>
   );
 };

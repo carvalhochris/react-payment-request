@@ -36,7 +36,7 @@ const Checkout = props => {
   if (paymentRequest) {
     paymentRequest.on('paymentmethod', async ev => {
       const response = await axios.post(
-        'https://warm-gorge-84676.herokuapp.com/create-payment-intent/',
+        'https://secret-harbor-59973.herokuapp.com/create-payment-intent/',
         {
           amount: 100,
           automatic_payment_methods: {
